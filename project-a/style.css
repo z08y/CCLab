@@ -8,10 +8,11 @@ CCLaboratories Biodiversity Atlas
 body {
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
     line-height: 1.5em;
-    color: black;
+    color: rgb(78, 88, 185, 0.8);
+
     ;
 }
 
@@ -34,11 +35,11 @@ body {
 .headline {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
+    font-weight: 00;
     margin-top: 80px;
     margin-bottom: 60px;
-    color: rgb(127, 152, 182);
-    background-color: rgb(50, 36, 58);
+
+    background-color: rgb(78, 88, 185, 0.8);
     display: inline-block;
     padding: 10px;
 
@@ -61,20 +62,20 @@ body {
 
 .red {
     color: rgb(50, 36, 58);
-    background-color: black;
+    background-color: rgb(78, 88, 185, 0.8);
     display: inline-block;
 
 }
 
 .green {
     color: rgb(50, 36, 58);
-    background-color: black;
+    background-color: rgb(78, 88, 185, 0.8);
     display: inline-block;
 }
 
 .yellow {
     color: rgb(50, 36, 58);
-    background-color: black;
+    background-color: rgb(78, 88, 185, 0.8);
     display: inline-block;
 }
 
@@ -111,15 +112,15 @@ body {
     right: 15px;
     top: 15px;
     padding: 5px 10px;
-    color: black;
-    border: solid black 0.5px;
-    font-size: 0.6em;
+    color: whitesmoke;
+    border: solid whitesmoke 0.5px;
+    font-size: 10px;
     text-decoration: none;
 }
 
 #home a:hover {
-    background-color: black;
-    color: white;
+    background-color: whitesmoke;
+    color: rgb(50, 36, 58);
     font-weight: bold;
 }
 
