@@ -70,16 +70,15 @@ function drawCreature(
 // DEFINE ADDITIONAL FUNCTIONS HERE
 function drawBody(trsinValue, trcosValue, sinValue, cosValue, limbopacity) {
     if (
-        mouseX > 275 &&
-        mouseX < 536 &&
+        mouseX > 300 &&
+        mouseX < 500 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
     ) {
         //console.log(bodyscale);
         bodyscale = map(mouseY, 200, 501, 0.9, 2.5);
-        //limbopacity=limbopacity-1
-        //let limbopacity = map(mouseY, 190, 430, 200, 0);
+
         push();
 
         translate(0, 0);
@@ -149,8 +148,8 @@ function drawArm1(flicker, sinValue) {
     scale(0.9);
     if (
         angle1 > -150 &&
-        mouseX > 275 &&
-        mouseX < 536 &&
+        mouseX > 300 &&
+        mouseX < 500 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
@@ -163,7 +162,6 @@ function drawArm1(flicker, sinValue) {
     }
     rotate(angle1);
     fill(78, 88, 185, flicker);
-    //noFill();
     blendMode(ADD);
     stroke(78, 88, 185);
     strokeWeight(1.2);
@@ -194,8 +192,8 @@ function drawArm2(flicker, sinValue) {
     scale(0.9);
     if (
         angle2 < 150 &&
-        mouseX > 275 &&
-        mouseX < 536 &&
+        mouseX > 300 &&
+        mouseX < 500 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
@@ -236,7 +234,7 @@ function drawArm2(flicker, sinValue) {
 }
 
 function drawHabitat(limbopacity, trcosValue, cosValue) {
-    if (mouseX > 200 && mouseX < 500 && mouseY > 220 && mouseIsPressed) {
+    if (mouseX > 300 && mouseX < 500 && mouseY > 220 && mouseIsPressed) {
         stringtip = mouseY - 250;
         push();
         strokeWeight(1);
@@ -251,7 +249,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -210 - cosValue,
             -130 + cosValue,
             -190,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -261,7 +259,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 - cosValue,
             -100 + cosValue,
             -150,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -271,7 +269,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -180 - cosValue,
             -100 + cosValue,
             -180,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -281,7 +279,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 - cosValue,
             -30 + cosValue,
             -150,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -291,7 +289,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 + cosValue,
             -70 - cosValue,
             -170,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -301,7 +299,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 + cosValue,
             10 - cosValue,
             -170,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -311,7 +309,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 - cosValue,
             100 + cosValue,
             -150,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -321,7 +319,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -200 - cosValue,
             60 + cosValue,
             -150,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -331,7 +329,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -180 - cosValue,
             30 + cosValue,
             -190,
-            -30,
+            mouseX - 400,
             stringtip
         );
         spline(
@@ -341,7 +339,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
             -220,
             10 + cosValue,
             -190,
-            -30,
+            mouseX - 400,
             stringtip
         );
         pop();
@@ -457,7 +455,7 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
     }
 }
 function drawFinal(finalopacity, limbopacity) {
-    if (mouseX > 200 && mouseX < 500 && mouseY > 300 && mouseIsPressed) {
+    if (mouseX > 300 && mouseX < 500 && mouseY > 300 && mouseIsPressed) {
         for (let i = 0; i < 100; i++) {
             let endX = random(-400, 400);
             let endY = random(-250, 250);
