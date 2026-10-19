@@ -77,15 +77,19 @@ function drawBody(trsinValue, trcosValue, sinValue, cosValue, limbopacity) {
         mouseIsPressed
     ) {
         //console.log(bodyscale);
-        bodyscale = map(mouseY, 200, 501, 0.9, 2.5);
+        bodyscale = map(mouseY, 200, 501, 1, 6);
 
         push();
-
+        translate(0, 30);
         translate(0, 0);
 
         scale(bodyscale);
+        let c1 = color(91, 66, 105, 180);
+        let c2 = color(250, 0);
+        let amt = map(mouseY, 200, 420, 0, 1);
+        let interColor = lerpColor(c1, c2, amt);
 
-        fill(255, limbopacity - 100);
+        fill(interColor);
         stroke(78, 88, 185, limbopacity);
         strokeWeight(2);
         beginShape();
