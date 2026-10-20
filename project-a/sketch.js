@@ -16,8 +16,8 @@ let stringtip = -90;
 function setup() {
     createCanvas(800, 500);
     angleMode(DEGREES);
-    let limbopacity = map(mouseY, 190, 500, 200, 0);
-    let finalopacity = map(mouseY, 190, 500, 0, 200);
+
+
 }
 
 function draw() {
@@ -70,8 +70,8 @@ function drawCreature(
 // DEFINE ADDITIONAL FUNCTIONS HERE
 function drawBody(trsinValue, trcosValue, sinValue, cosValue, limbopacity) {
     if (
-        mouseX > 300 &&
-        mouseX < 500 &&
+        mouseX > 350 &&
+        mouseX < 450 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
@@ -152,8 +152,8 @@ function drawArm1(flicker, sinValue) {
     scale(0.9);
     if (
         angle1 > -150 &&
-        mouseX > 300 &&
-        mouseX < 500 &&
+        mouseX > 350 &&
+        mouseX < 450 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
@@ -196,8 +196,8 @@ function drawArm2(flicker, sinValue) {
     scale(0.9);
     if (
         angle2 < 150 &&
-        mouseX > 300 &&
-        mouseX < 500 &&
+        mouseX > 350 &&
+        mouseX < 450 &&
         mouseY > 190 &&
         mouseY <= 500 &&
         mouseIsPressed
@@ -459,10 +459,10 @@ function drawHabitat(limbopacity, trcosValue, cosValue) {
     }
 }
 function drawFinal(finalopacity, limbopacity) {
-    if (mouseX > 300 && mouseX < 500 && mouseY > 300 && mouseIsPressed) {
+    if (mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseIsPressed) {
         for (let i = 0; i < 100; i++) {
-            let endX = random(-400, 400);
-            let endY = random(-250, 250);
+            let targetX = random(-400, 400);
+            let targetY = random(-250, 250);
             if (mouseY > 300) {
                 progress += 0.05;
             }
@@ -473,8 +473,8 @@ function drawFinal(finalopacity, limbopacity) {
             translate(0, 0);
             fill(255, limbopacity + 100);
             stroke(255, limbopacity);
-            let x = lerp(-20, endX, progress);
-            let y = lerp(-20, endY, progress);
+            let x = lerp(-20, targetX, progress);
+            let y = lerp(-20, targetY, progress);
 
             rect(x, y, 2, 2);
         }
