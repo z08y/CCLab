@@ -1,10 +1,3 @@
-/*
-Template for IMA's Creative Coding Lab 
-
-Project A: Generative Creatures
-CCLaboratories Biodiversity Atlas 
-*/
-
 let progress = 0;
 let angle1 = 0;
 let angle2 = 0;
@@ -464,7 +457,7 @@ function drawFinal(finalopacity, limbopacity) {
             let targetX = random(-400, 400);
             let targetY = random(-250, 250);
             if (mouseY > 300) {
-                progress += 0.05;
+                progress += 0.0005;
             }
 
             if (progress >= 1) {
