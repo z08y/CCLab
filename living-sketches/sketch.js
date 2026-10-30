@@ -88,11 +88,7 @@ function draw() {
   }
 
 }
-function mousePressed() {
-  let blurred = ((frameCount - 1) / 20) % talk.length;
-  filter(BLUR, blurred - 1);
 
-}
 // IMAGE PROCESSING FUNCTIONS
 // You shouldn't need to modify these helper functions:
 function crop(images, x, y, width, height) {
